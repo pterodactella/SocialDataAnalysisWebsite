@@ -80,6 +80,10 @@ section {
     text-align: left;
 }
 
+.paragraph-content-2 {
+    color: black;
+}
+
 .title-wrap,
 .section-title {
     text-align: center;
