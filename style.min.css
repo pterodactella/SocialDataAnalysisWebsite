@@ -974,7 +974,8 @@ section {
 
 .blog-content a.box_btn {
     display: inline-block;
-    background-color: #FF7200;
+    border-radius: 25px;
+    background-color: #000000;
     padding: 5px 15px;
     color: #fff;
     text-transform: capitalize;
