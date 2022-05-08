@@ -66,10 +66,11 @@ section {
     position: relative;
 }
 
-.section-content {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
+
+/* .section-content {
+    padding-top: 150px;
+    padding-bottom: 150px;
+} */
 
 .title-content {
     color: black;
@@ -83,6 +84,7 @@ section {
 .paragraph-content-2 {
     color: black;
     font-size: 22px;
+    padding-top: 30px;
 }
 
 .paragraph-content-22 {
@@ -207,7 +209,7 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #070707ab;
+    background: #ebf5fb;
     /* background-image: url(/img/melbourne3.jpeg); */
     /* background-size: 850px; */
     /* fallback for old browsers */
@@ -1325,6 +1327,24 @@ a.box_btn:hover::before {
     height: 100%;
     border: none;
     object-fit: contain;
+}
+
+.end-main {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.buttom-main {
+    background-color: #ebf5fb77;
+}
+
+.container-buttom {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 80px;
+    padding-left: 80px;
 }
 
 
