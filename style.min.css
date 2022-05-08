@@ -540,8 +540,13 @@ section {
 }
 
 .github {
-    padding-top: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     text-align: center;
+}
+
+.github-par {
+    font-size: 18px;
 }
 
 
