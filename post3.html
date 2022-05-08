@@ -117,7 +117,7 @@
     </div>
     <div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/blog-1.jpg)">
         <div class="container text-center">
-            <h1 class="display-2 mb-4">Title of post</h1>
+            <h1 class="display-2 mb-4">Data Merging</h1>
         </div>
     </div>
     <!-- Contact Form Section -->
@@ -128,9 +128,45 @@
                 <div class="row">
                     <!-- Single Content Holder -->
                     <div class="col-md-8 offset-md-2 mt-4">
-                        <h4>Another title</h4>
+                        <!-- <h4>Merging the datasets</h4> -->
                         <img class="float-left" width="320px" src="img/blog-4.jpg" alt="">
-                        <p><br>The actual blog post</p>
+                        <br>
+                        <br>
+
+                        <p> Since we had 4 datasets, an important task was merging those in order to create a dataset that would be suitable for modelling. <br><br> Since we first started to take a look at the microclimate sensors, aligning the dataset with
+                            the sensor readings with the locations dataset of the sensors was rather trivial: this was done through the site_id which was present in both the dataset. The site id of a sensor is a unique identifier, referring to the location
+                            of the sensor device. The same was applied for the pedestrian counting sensors, as both the dataset with the readings and the locations had a unique sensor id for each location. In this way, the geo-location was attached to
+                            both the microclimate sensors and the pedestrian sensors. <br><br> Now here is where the interesting part comes in: merging the microclimate and the pedestrian counting sensors. The first filtering was done on the measurement
+                            date. Since there were different reading frequencies, a daily average was taken for each reading type. An daily average was then attributed a date, in the YY-MM-DD format. Since when selecting these datasets we were looking
+                            for similar and recent time-frames, there was an overlapping range of 867 dates of both microclimate and pedestrian counting sensor readings. This means that, on a given date, there was both a daily average reading of each
+                            microclimate factor (air pollution, humidity, temperature etc.) and a average reading of pedestrian counts. Thus, both the microclimate sensors and pedestrian counting sensor datasets were filtered out based on the dates they
+                            had in common.
+                            <br><br> The most challenging part was merging the sensor readings based on the relevant locations. Since sensors are spread out, not all readings are relevant with each other. For example, a sensor measuring 500 pedestrians
+                            walking in a day at a given place would not be relevant for a sensor registering a microclimate change 20 km away. Furthermore, sensors placed within a close range might register different values. <br><br> Our approach was
+                            the following: first, we had to delimit a region where the locations of the microclimate and pedestrian counting sensors either overlapped or were fairly close to each other. Since microclimate sensors were more sparse, the
+                            delimiting the region was based on the limited spread of those sensors. The map bellow shows the latitudinal and longitudinal red lines, which were manually selected to delimit such a region. The blue zones indicate the locations
+                            of the microclimate sensors, and the intensity of the color shows where more sensors are located within a close range. The zones highlighted in pink show the pedestrian counting sensors, where the intensity indicates that more
+                            pedestrian sensors are located within a close range. <br><br>
+                        </p>
+                        <iframe src="/graphs/map_datamerging_1.html" class="graphs"></iframe>
+                        <br>
+                        <p>
+                            Overall, the red quadrant is drawn within [-37.798000, -37.824045] latitude and [144.9487798, 144.9747798] longitude limits. However, we need to further divide this region into smaller sub-areas. Those were selected within: South Wharf, Flinders Street,
+                            Melbourne Central Areas and Carlton regions. The map bellow shows the delimitations of the selected regions, marked with a dashed line: <br>
+                        </p>
+                        <iframe src="/graphs/map_datamerging_2.html" class="graphs"></iframe>
+                        <p>The point was to take an overall average of the pedestrian counts within this region in order to homogenise the spread. We also took an average for the microclimate sensor readings. For splitting the regions, it was taken into
+                            account that the regions with fewer, but more frequent microclimate sensors next to each other (example: the Convention Centre Parking in South Wharf) had a narrower range than the regions with a wider spread of sensors (such
+                            as in the Central Area of Melbourne). <br><br> The assumption was that, since pedestrians were moving, taking an average of counts within this regions will homogenise the spread. The idea was for the measurements would be to
+                            some extent relevant to the reading locations of the microclimate sensors. <br><br> Thus, each delimited area will have an overall average daily reading of microclimate factors and pedestrian counts. Furthermore, now that the
+                            geo-location has been taken into account, we have overall merged the two datasets based on the regions they were relevant for. <br>
+                            <br> However, to prepare this dataset for the next modelling step, the measurement types needed to be pivotted into separate columns. Thus, on a given date/entry, each region had an average of particulate air pollution, temperature,
+                            pressure and humidity measure, as well as an average of pedestrian counts. The finalised merged dataset looks as follows: <br><br>
+
+                            <img src="/img/dataset.png" class="dataset-table"> <br> <br>
+
+                        </p>
+
                     </div>
                     <!-- End of Contact Form Holder -->
                 </div>
