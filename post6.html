@@ -117,7 +117,7 @@
     </div>
     <div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/blog-1.jpg)">
         <div class="container text-center">
-            <h1 class="display-2 mb-4">Title of post</h1>
+            <h1 class="display-2 mb-4">Key Takeawyas</h1>
         </div>
     </div>
     <!-- Contact Form Section -->
@@ -128,9 +128,24 @@
                 <div class="row">
                     <!-- Single Content Holder -->
                     <div class="col-md-8 offset-md-2 mt-4">
-                        <h4>Another title</h4>
+                        <!-- <h4>Another title</h4> -->
                         <!-- <img class="float-left" width="320px" src="img/blog-4.jpg" alt=""> -->
-                        <p><br>The actual blog post</p>
+                        <p><br><br><br> Bellow you have an overview with the main takeaways from the entire analysis. <br><br> Looking at the temporal patterns we discovered that Particulate air pollution is higher in the summer months is peaking compared
+                            to the winter months. This is is caused by the fact that arid weather loosens the dust particles in the air. The sensors are located in areas of Melbourne that are not that windy throughout the year. Thus the Average wind speed
+                            is relatively low. Moreover, the average wind speed tends to be smaller for March, April, May and June. Not much change can be seen for the Barometric Pressure as the average values seem to be constant throughout the year.
+                            The sensor locations are quite humid, but one can observe that the Relative Humidity tends to be higher on an average for the winter months. The Ambient Air Temperature, as expected, is higher in the summer months and colder
+                            in the winter months. <br><br> The Geo data analysis confirms the findings from the temporal patterns and shows high readings of small air pollutants (>11 micro grams per cubic meter) from the beginning of January 2021 to the
+                            final weeks of April. More high readings are also recorded from September until the end of December with peaks in November and December. <br><br> Based on the exploratory analysis, we have found out that some attributes might
+                            be correlated. We have discovered that air pollution concentrations with 2.5μm particles (PM2.5) goes hand in hand with the air pollution with 10μm particles (PM10). Both are good indicators of air pollution, so it is expected.
+                            The Ambient Air Temperature and Relative Humidity in a given location are slightly negatively correlated, which could indicate that warm seasons are a bit dry in specific areas of Melbourne. The general climate of Melbourne
+                            is usually like this ( <a href="https://www.australia.com/en/facts-and-planning/weather-in-australia/melbourne-weather.html">source</a>), so it is expected. <br><br> Based on the dataset we have collected and processed, we
+                            have created a Random Forrest Classifier model which can predict if there is moderate air pollution in some areas on a given day, based on the average temperature, humidity, region and pedestrian numbers. This would be a useful
+                            for green urban planning in Melbourne The model had an overall accuracy of 86%. However, there is still debate whether the model is good at separating the classes/answers (is there air pollution or not?). We have decided not
+                            to apply debiasing for our model, but instead try to find more data for future experiments. <br><br> What this model has also shown us is that yes, the number of pedestrians might be related to the air pollution in a certain
+                            local area. Unfortunately, traffic was not taken into consideration due to the lack of recent datasets of traffic counts. But the model overall tells us something about air pollution based on some micro-climate factors and
+                            the crowds of people on the streets. Let’s not forget, however, that the areas inspected in the observed regions (the Melbourne Convention Centre Park in South Wharf, some crossroads on Flinders Street, some streets in the
+                            Melbourne Central Area and some streets in Carlton) don’t really have many high air pollution daily averages. Thus, there might not be a need of changing those areas after all. However, the model we have made could be used
+                            to inspect further areas! Up to you if you want to have a talk with the mayor of Melbourne to disclose us more data... He might be interested!</p>
                     </div>
                     <!-- End of Contact Form Holder -->
                 </div>

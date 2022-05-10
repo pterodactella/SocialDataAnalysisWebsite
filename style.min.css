@@ -1100,7 +1100,7 @@ a.box_btn:hover::before {
     justify-items: end;
     align-items: center; */
     display: inline-flex;
-    grid-column-gap: 10px;
+    grid-column-gap: 50px;
     justify-content: space-evenly;
     justify-items: center;
     align-content: space-evenly;
@@ -1365,6 +1365,13 @@ a.box_btn:hover::before {
 .blog-padding {
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.bokeh {
+    width: 860px;
+    height: 600px;
+    margin: 0 auto;
+    border: #ebf5fb;
 }
 
 

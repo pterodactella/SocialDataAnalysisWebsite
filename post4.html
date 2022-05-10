@@ -117,7 +117,7 @@
     </div>
     <div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/blog-1.jpg)">
         <div class="container text-center">
-            <h1 class="display-2 mb-4">Title of post</h1>
+            <h1 class="display-2 mb-4">Exploratory Analysis</h1>
         </div>
     </div>
     <!-- Contact Form Section -->
@@ -128,9 +128,29 @@
                 <div class="row">
                     <!-- Single Content Holder -->
                     <div class="col-md-8 offset-md-2 mt-4">
-                        <h4>Another title</h4>
+                        <!-- <h4>Another title</h4> -->
                         <!-- <img class="float-left" width="320px" src="img/blog-4.jpg" alt=""> -->
-                        <p><br>The actual blog post</p>
+                        <p><br><br> Let us unravel the mysteries of countless of data! What can we basically find out from exploring it? Most of the data exploration will be based on the features, that is the columns of the dataset (also known as attributes).
+                            This includes: Region (the areas were samples from), Daily Pedestrian Counts, Particulate Air Pollution, Ambient Air Temperature and Relative Humidity. First, let’s see the ranges of each of these values covers. For this we
+                            use boxplots! <br><br> <img src="/graphs/boxplots_all.png" alt=""></p> <br><br> The distributions are different for each feature, which is expected, since they have different measurement units. There might be some outliers
+                        for the microclimate readings, but the <a href="https://data.melbourne.vic.gov.au/Environment/Microclimate-Sensor-Readings/u4vh-84j8">data source­</a> specifies which readings are without errors - these are the ones we selected,
+                        so we will trust them! There are some outliers also for pedestrian counts, but as we took daily averages, we have decided to trust those. What we are interested in is the Particulate Air Pollution, for both 2.5 µm particles (PM2.5)
+                        and 10 µm particles (PM10). It seems that the median (middle value) for PM2.5 particles readings is around 10μg/m3, whereas for PM10 particles is around 25μg/m3. We will use the information of these boxplots when we try to make
+                        predictions on those attributes (<a href="https://benevolent-profiterole-ed4d38.netlify.app/post5.html"> see the Modeling</a> section). Now, let’s investigate how all the attributes are related with each other. For this, we made
+                        scatter plots between any 2-pair-combination of attributes: <br><br> <img src="/graphs/scatterplots.png" alt=""> <br><br> Since it does not make sense to make scatter plots between the same attributes, histograms have been plotted
+                        instead. Those can be seen in the diagonal plots. The histograms give us some information regarding the distribution of the measurements. Ambient Air Temperature and Relative Humidity seem to be normally distributed over the selected
+                        dates, and this shows that measurements are as likely to occur on one side of the average as on the other side of the average (data is more balanced). The histograms for Particulate Air Pollution attributes are a bit right-skewed,
+                        which means that  a large number of data values occur on the left side with a fewer number of data values on the right side – so the mean is higher than the median . <br><br> Let’s investigate the scatter-plots, which could reveal
+                        more info! There seems to be a strong positive correlation between Particulate Air Pollution (10 µm) and Particulate Air Pollution (2.5 µm). Furthermore, there seems to be a slightly negative correlation between Ambient Air Temperature
+                        and Relative Humidity. Let's plot a correlation matrix based on calculated <a href="https://www.sciencedirect.com/topics/computer-science/pearson-correlation">Pearson's coefficients</a> between those attributes , in order to confirm:
+                        <br><br> <img src="/graphs/correl_coeff.png"> <br><br> A Pearson’s coefficient close to +1 indicates a strong positive correlation, and a coefficient close to -1 indicates a strong negative correlation. A coefficient lose to 0
+                        indicates no correlation. The Coefficient Matrix confirms it: there is indeed a strong positive correlation between Particulate Air Pollution of 10 µm in size (also known as PM10) and Particulate Air Pollution of 2.5 µm in size,
+                        also known as PM2.5. This is shown by the Pearson's coefficient value of 0.97 shows. This means that those attributes grow alongside in the same direction. This is not surprising, as both attributes are air particles (just of slightly
+                        different size), and are both indicators of air pollution. Moreover, there is a slightly negative correlation between Ambient Air Temperature and Relative Humidity (a Pearson’s coefficient of about -0.48), which could indicate
+                        that warm seasons are a bit dry in certain areas of Melbourne. The general climate of Melborune is usually <a href="https://www.australia.com/en/facts-and-planning/weather-in-australia/melbourne-weather.html">like this</a>, so
+                        it is expected. <br><br> Overall, we have discovered some interesting relations in our data through this exploratory analsys, some of which actually make sense. Let’s find out what other interesting things we found out by reading
+                        our <a href="post5.html"> Modeling</a> section!
+
                     </div>
                     <!-- End of Contact Form Holder -->
                 </div>

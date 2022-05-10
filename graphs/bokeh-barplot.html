@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.2.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="45c34abd-6455-44a0-8a9b-e14ea55b0c14" data-root-id="2088"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="2463">
+          {"67c28d2d-e9d8-4ee8-b4ce-c6fa675974df":{"defs":[],"roots":{"references":[{"attributes":{"tabs":[{"id":"2087"}]},"id":"2088","type":"Tabs"},{"attributes":{"child":{"id":"2086"},"title":"Show by Race"},"id":"2087","type":"Panel"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"lightsalmon"},"hatch_alpha":{"value":0.2},"hatch_pattern":{"value":" "},"line_alpha":{"value":0.2},"line_color":{"value":"lightsalmon"},"top":{"field":"samples_by_region"},"width":{"value":0.5},"x":{"field":"Region"}},"id":"1038","type":"VBar"},{"attributes":{"coordinates":null,"data_source":{"id":"1002"},"glyph":{"id":"1036"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"1038"},"nonselection_glyph":{"id":"1037"},"view":{"id":"1040"}},"id":"1039","type":"GlyphRenderer"},{"attributes":{},"id":"1044","type":"AllLabels"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"lightsalmon"},"hatch_alpha":{"value":0.1},"hatch_pattern":{"value":" "},"line_alpha":{"value":0.1},"line_color":{"value":"lightsalmon"},"top":{"field":"samples_by_region"},"width":{"value":0.5},"x":{"field":"Region"}},"id":"1037","type":"VBar"},{"attributes":{},"id":"1024","type":"SaveTool"},{"attributes":{},"id":"1012","type":"LinearScale"},{"attributes":{},"id":"1047","type":"AllLabels"},{"attributes":{"factors":["South Wharf","Flinders Crossroad","Central Area","Carlton"]},"id":"1006","type":"FactorRange"},{"attributes":{"label":{"value":"samples_by_region"},"renderers":[{"id":"1039"}]},"id":"1052","type":"LegendItem"},{"attributes":{},"id":"1021","type":"PanTool"},{"attributes":{"callback":null,"renderers":[{"id":"1057"}],"tooltips":[["Fraction of moderate air pollution occurences by region: ","@frac_recid{%0.2f}"],["Fraction of total moderate air pollution occurences by region: ","@frac_total{%0.2f}"]]},"id":"1073","type":"HoverTool"},{"attributes":{"below":[{"id":"1014"}],"center":[{"id":"1016"},{"id":"1020"},{"id":"1051"}],"height":500,"left":[{"id":"1017"},{"id":"1070"}],"renderers":[{"id":"1039"},{"id":"1057"}],"title":{"id":"1004"},"toolbar":{"id":"1028"},"width":800,"x_range":{"id":"1006"},"x_scale":{"id":"1010"},"y_range":{"id":"1008"},"y_scale":{"id":"1012"}},"id":"1003","subtype":"Figure","type":"Plot"},{"attributes":{"click_policy":"hide","coordinates":null,"group":null,"items":[{"id":"1052"},{"id":"1069"}],"visible":false},"id":"1051","type":"Legend"},{"attributes":{"label":{"value":"Moderate Air Pollution Readings"},"renderers":[{"id":"1057"}]},"id":"1072","type":"LegendItem"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"maroon"},"hatch_alpha":{"value":0.1},"hatch_pattern":{"value":"/"},"line_alpha":{"value":0.1},"line_color":{"value":"maroon"},"top":{"field":"re_com"},"width":{"value":0.5},"x":{"field":"Region"}},"id":"1055","type":"VBar"},{"attributes":{},"id":"1018","type":"BasicTicker"},{"attributes":{},"id":"1015","type":"CategoricalTicker"},{"attributes":{},"id":"1049","type":"Selection"},{"attributes":{"label":{"value":"Samples by Region"},"renderers":[{"id":"1039"}]},"id":"1071","type":"LegendItem"},{"attributes":{"fill_alpha":{"value":0},"fill_color":{"value":"maroon"},"hatch_pattern":{"value":"/"},"line_color":{"value":"maroon"},"top":{"field":"re_com"},"width":{"value":0.5},"x":{"field":"Region"}},"id":"1054","type":"VBar"},{"attributes":{"bottom_units":"screen","coordinates":null,"fill_alpha":0.5,"fill_color":"lightgrey","group":null,"left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"1027","type":"BoxAnnotation"},{"attributes":{"children":[{"id":"2085"}]},"id":"2086","type":"Column"},{"attributes":{},"id":"1025","type":"ResetTool"},{"attributes":{"coordinates":null,"data_source":{"id":"1002"},"glyph":{"id":"1054"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"1056"},"nonselection_glyph":{"id":"1055"},"view":{"id":"1058"}},"id":"1057","type":"GlyphRenderer"},{"attributes":{},"id":"1010","type":"CategoricalScale"},{"attributes":{"label":{"value":"re_com"},"renderers":[{"id":"1057"}]},"id":"1069","type":"LegendItem"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"maroon"},"hatch_alpha":{"value":0.2},"hatch_pattern":{"value":"/"},"line_alpha":{"value":0.2},"line_color":{"value":"maroon"},"top":{"field":"re_com"},"width":{"value":0.5},"x":{"field":"Region"}},"id":"1056","type":"VBar"},{"attributes":{"source":{"id":"1002"}},"id":"1058","type":"CDSView"},{"attributes":{"click_policy":"hide","coordinates":null,"group":null,"items":[{"id":"1071"},{"id":"1072"}]},"id":"1070","type":"Legend"},{"attributes":{"fill_color":{"value":"lightsalmon"},"hatch_pattern":{"value":" "},"line_color":{"value":"lightsalmon"},"top":{"field":"samples_by_region"},"width":{"value":0.5},"x":{"field":"Region"}},"id":"1036","type":"VBar"},{"attributes":{"axis_label":"Region","coordinates":null,"formatter":{"id":"1046"},"group":null,"major_label_policy":{"id":"1047"},"ticker":{"id":"1015"}},"id":"1014","type":"CategoricalAxis"},{"attributes":{},"id":"1043","type":"BasicTickFormatter"},{"attributes":{"tools":[{"id":"1021"},{"id":"1022"},{"id":"1023"},{"id":"1024"},{"id":"1025"},{"id":"1026"},{"id":"1073"}]},"id":"1028","type":"Toolbar"},{"attributes":{"axis":{"id":"1014"},"coordinates":null,"group":null,"ticker":null},"id":"1016","type":"Grid"},{"attributes":{"axis_label":"Number of Samples","coordinates":null,"formatter":{"id":"1043"},"group":null,"major_label_policy":{"id":"1044"},"ticker":{"id":"1018"}},"id":"1017","type":"LinearAxis"},{"attributes":{"overlay":{"id":"1027"}},"id":"1023","type":"BoxZoomTool"},{"attributes":{"children":[{"id":"1003"}]},"id":"2085","type":"Row"},{"attributes":{},"id":"1048","type":"UnionRenderers"},{"attributes":{},"id":"1022","type":"WheelZoomTool"},{"attributes":{},"id":"1026","type":"HelpTool"},{"attributes":{"source":{"id":"1002"}},"id":"1040","type":"CDSView"},{"attributes":{"data":{"Region":["Carlton","Central Area","Flinders Crossroad","South Wharf"],"frac_air_pollution":{"__ndarray__":"J2lTROa53T+nAn7h1t7YP/D4wwGPP9w/FEVRFEVRxD8=","dtype":"float64","order":"little","shape":[4]},"frac_total":{"__ndarray__":"d+UFVO114D+o2usgFW3CPwpTX858cs8/4Hg6gXGRuD8=","dtype":"float64","order":"little","shape":[4]},"index":[0,1,2,3],"re_com":[268,75,128,50],"samples_by_region":[577,193,290,315]},"selected":{"id":"1049"},"selection_policy":{"id":"1048"}},"id":"1002","type":"ColumnDataSource"},{"attributes":{},"id":"1008","type":"DataRange1d"},{"attributes":{"coordinates":null,"group":null,"text":"Number of Samples by Region"},"id":"1004","type":"Title"},{"attributes":{},"id":"1046","type":"CategoricalTickFormatter"},{"attributes":{"axis":{"id":"1017"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"1020","type":"Grid"}],"root_ids":["2088"]},"title":"Bokeh Application","version":"2.4.2"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            const fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  const docs_json = document.getElementById('2463').textContent;
+                  const render_items = [{"docid":"67c28d2d-e9d8-4ee8-b4ce-c6fa675974df","root_ids":["2088"],"roots":{"2088":"45c34abd-6455-44a0-8a9b-e14ea55b0c14"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    let attempts = 0;
+                    const timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
